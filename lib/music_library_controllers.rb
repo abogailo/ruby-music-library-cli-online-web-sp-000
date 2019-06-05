@@ -1,5 +1,5 @@
 class MusicLibraryController
-  
+
   def initialize(path = "./db/mp3s")
     importer = MusicImporter.new(path)
     importer.import
@@ -17,7 +17,7 @@ class MusicLibraryController
     puts "What would you like to do?"
 
      loop do
-      input = gets.chomp 
+      input = gets.chomp
       break if input == "exit"
 
        if input == "list artists"

@@ -21,11 +21,6 @@ class Artist
     self.new(artist).tap {|name| name.save}
   end
 
-  def add_song(song)
-    song.artist = self unless song.artist
-    @songs << song unless @songs.include?(song)
-  end
-
   def self.all
     @@all
   end
@@ -34,6 +29,11 @@ class Artist
     @@all.clear
   end
 
+  def add_song(song)
+    song.artist = self unless song.artist
+    @songs << song unless @songs.include?(song)
+  end
+  
   def genres
     songs.collect { |song| song.genre}.uniq
   end

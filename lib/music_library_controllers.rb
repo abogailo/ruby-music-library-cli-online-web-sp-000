@@ -1,10 +1,11 @@
 class MusicLibraryController
+  
   def initialize(path = "./db/mp3s")
     importer = MusicImporter.new(path)
     importer.import
   end
 
-   def call
+  def call
     puts "Welcome to your music library!"
     puts "To list all of the artists in your library, enter 'list artists'."
     puts "To list all of your songs, enter 'list songs'."
@@ -16,7 +17,7 @@ class MusicLibraryController
     puts "What would you like to do?"
 
      loop do
-      input = gets.strip #until input = "exit"
+      input = gets.chomp 
       break if input == "exit"
 
        if input == "list artists"

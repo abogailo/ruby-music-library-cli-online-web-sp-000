@@ -87,6 +87,7 @@ def play_song
     song = Song.all.sort_by!{|song| song.name}
     puts "Playing #{song[input-1].name} by #{song[input-1].artist.name}"
   end
+  #binding.pry
 end
 
 end

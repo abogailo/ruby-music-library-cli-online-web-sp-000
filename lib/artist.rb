@@ -10,7 +10,7 @@ class Artist
 
   def initialize(name)
     @name = name #name gets set upon initialization
-    @songs = [] #all songs added to the 
+    @songs = [] #all songs added to the
   end
 
   def save

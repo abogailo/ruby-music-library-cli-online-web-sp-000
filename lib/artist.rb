@@ -1,16 +1,15 @@
 require 'pry'
 
 class Artist
-  extend Concerns::Findable
+  extend Concerns::Findable #extends concerns findable module
 
-  attr_accessor :name
-  attr_reader :songs
+  attr_accessor :name #writes and reads a name
+  attr_reader :songs #only needs to get the songs
 
   @@all = []
 
   def initialize(name)
-    @name = name
-    @songs = []
+    @name = name #name gets set upon initialization
   end
 
   def save

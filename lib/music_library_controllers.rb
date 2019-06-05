@@ -85,7 +85,7 @@ def play_song
   input = gets.strip.to_i  #input to be 1 through size of Song.all
   if input.between?(1,Song.all.length)
     song = Song.all.sort_by!{|song| song.name}
-    puts "Playing #{song.name} by #{song.artist.name}"
+    puts "Playing #{song[input].name} by #{song[input].artist.name}"
   end
 end
 
